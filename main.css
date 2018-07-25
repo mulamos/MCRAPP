@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+/*-------Global-------*/
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+:root {
+    --main-red: #FE0000;
+    --main-green: #00BF84;
+    --main-black: #1B1B1B;
+    --main-gray: #9B9B9B;
+    --main-blue: #3C434C;
+    --main-darkblue: #31373F;
+}
+html {
+    font-family: 'roboto', serif;
+    height: 100%;
+    min-height: 100%;
+}
+body {
+    width: 100%;
+    height: 100%;
+    background-image: url(Assets/display%20bg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: roboto;
+    min-height: 100%;
+    overflow:hidden;
+    z-index: -1;
+}
+.main-container{
+    overflow: auto;
+}
+
+/*-------Time Date Section-------*/
+.main-container .timedate .time{
+    font-size: 64px;
+    color: white;
+    display: table-cell;
+    font-weight: 400;
+    color: #ffffff;
+    height: inherit;
+    width: inherit;
+    vertical-align: middle;
+    line-height: 60px;
+}
+.main-container .timedate .time span{
+    color: var(--main-black);
+    font-size: 32px;
+}
+.main-container .timedate{
+    background-color: var(--main-green);
+    height: 290px;
+    width: 505px;
+    opacity: .9;
+    filter: alpha(opacity=50);
+    text-align: center;
+    float:left;  
+    border-style:solid; 
+}
+
+/*-------Middle Section-------*/
+.main-container .mid-sect .options h1{
+    font-family: roboto;
+    font-size: 48px;
+    font-weight: 780;
+    color: var(--main-black);
+    cursor:pointer;
+}
+.main-container .mid-sect .options .room-opt{
+    float: left;
+    padding-right: 16px;
+    cursor: pointer;
+}
+.main-container .mid-sect .options .dropdwn{
+    margin-top: 24px;
+    cursor: pointer;
+}
+.main-container .mid-info p{
+    font-size: 32px;
+}
+.main-container .mid-info .top .red{
+    color: var(--main-red);
+    font-size: 32px;
+}
+.main-container .mid-info .top .green{
+    font-weight: 600;
+    color: var(--main-green);
+}
+.main-container .btnGroup .end-btn{
+    display: inline-block;
+    text-decoration: none;
+    width: 200px;
+    height: 60px;
+    line-height: 60px;
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 135px;
+    color: #ffffff;
+}
+.main-container .mid-sect .btnGroup{
+    position: relative;
+    z-index: 1;
+    margin-left: 80px;
+}
+.main-container .btnGroup .redBG{
+    background-color: var(--main-red);
+    display: block;
+    height: 60px;
+    width: 200px;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    border-radius: 16px;
+    cursor: pointer;
+}
+.main-container .btnGroup .redBG:hover{
+    cursor: pointer;
+    opacity: .6;
+}
+.main-container .mid-sect{
+    background-color: #D7DCDA;
+    opacity: .9;
+    filter: alpha(opacity=50);
+    float:left; 
+    width:710px; 
+    height:1200px; 
+}
+.mid-sect .options{
+    position: relative;
+    margin: 80px;
+}
+.mid-sect .mid-info{
+    margin-left: 80px;
+}
+.mid-sect .mid-info .top p{
+    margin-bottom: 16px;
+}
+.mid-sect .mid-info .top{
+    margin-bottom: 40px;
+}
+.mid-sect .mid-info .bottom p{
+    margin-bottom: 16px;
+}
+.mid-sect .mid-info .bottom{
+    margin-bottom: 80px;
+}
+
+/*-------Right Section-------*/
+.main-container .right-sect{
+    
+}
+.main-container .right-sect .right-top .green{
+    color: var(--main-green);
+    font-size: 36px;
+}
+.main-container .right-sect .right-info h3{
+    font-size: 32px;
+    font-weight: 400;
+    color: var(--main-gray);
+    letter-spacing: 1px;
+}
+.main-container .right-sect .right-info p {
+    font-size: 32px;
+    font-weight: 400;
+    color: white;
+}
+.main-container .right-sect .btnGroup{
+    position: relative;
+    z-index: 1;
+    margin-left: 80px;
+}
+.main-container .btnGroup .add-btn{
+    display: inline-block;
+    text-decoration: none;
+    width: 200px;
+    height: 60px;
+    line-height: 60px;
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 135px;
+    color: #ffffff;
+}
+.main-container .btnGroup .greenBG{
+    background-color: var(--main-green);
+    display: block;
+    height: 60px;
+    width: 200px;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    border-radius: 16px;
+    cursor: pointer;
+}
+.main-container .btnGroup .greenBG:hover{
+    cursor: pointer;
+    background-color: var(--main-green);
+    opacity: 1;
+}
+.main-container .right-sect .login-btn{
+    float: right;
+
+    cursor: pointer;
+}
+.main-container .right-sect .login-btn:hover{
+    opacity: 0.7;
+    cursor: pointer;
+}
+.main-container .right-sect{
+    background-color: #3C434C;
+    opacity: .9;
+    filter: alpha(opacity=50);
+    float:left; 
+    width:705px; 
+    height:1200px;
+}
+.right-sect .right-info .white {
+    color: white;
+}
+.right-sect .right-top{
+    margin:40px 0px 0px 80px;
+}
+.right-sect .right-info{
+    margin: 32px 80px 0px 80px;
+}
+ .right-sect .short-line{
+    width: 112px;
+    height: 47px;
+    border-bottom: 1px solid #9B9B9B;
+    position: absolute;
+    margin:40px 0px 0px 80px;
+    opacity: .25;
+    filter: alpha(opacity=25);
+    padding-bottom: 0px;
+}
+ right-sect .long-line{
+    width: 240px;
+    height: 47px;
+    border-bottom: 1px solid #9B9B9B;
+    position: absolute;
+    opacity: .25;
+    filter: alpha(opacity=25);
+    padding-bottom: 16px;
+}
+.right-sect .right-bottom{
+    margin: 32px 0px 64px 0px;
+}
+.container .login-btn button{
+    float: right;
+    margin-right: 475px;
+    margin-top: 16px;
+}
+

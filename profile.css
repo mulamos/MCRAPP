@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+/*-------Global-------*/
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+:root {
+    --main-red: #FE0000;
+    --main-green: #00BF84;
+    --main-black: #1B1B1B;
+    --main-gray: #9B9B9B;
+    --main-blue: #3C434C;
+    --main-darkblue: #31373F;
+}
+html {
+    font-family: 'roboto', serif;
+    height: 100%;
+    min-height: 100%;
+}
+body {
+    background: #EEEEEE;
+    width: 100%;
+    height: 100%;
+    font-family: roboto;
+    min-height: 100%;
+    overflow:hidden;
+    z-index: -1;
+}
+/*-------Profile Page-------*/
+#sideMenu{
+    background: var(--main-blue);
+    max-width: 340px;
+    width: 340px;
+    height: 100%;
+    border-right: 1.5px solid var(--main-red);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+}
+nav .back-btn{
+    padding: 16px 8px 16px 8px;
+    cursor: pointer
+}
+.active{
+    background: var(--main-darkblue);
+    border-left: 5px solid var(--main-green);
+    box-shadow: 1px 1px 2px black inset;
+}
+nav a{
+    font-family: roboto;
+    display: block;
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: 300;
+    text-align: center;
+    letter-spacing: 1px;
+    transition: all 0.5s ease-in-out;
+}
+nav div:hover{
+    border-left: 5px solid var(--main-green);
+    background: var(--main-darkblue);
+    opacity: .7;
+}
+nav div img{
+    padding: 8px 0px 8px 130px;
+    align-content: center;
+}
+nav div{
+    padding: 24px 0px 24px 0px;
+    cursor: pointer;
+}
+header .top-sect{
+    margin-left: 340px;
+    padding: 32px 0px 0px 40px;
+}
+header h1{
+    font-family: roboto;
+    font-size: 32px;
+    position: relative;
+    margin-left: 150px;
+    margin-top: 32px;
+}
+header h2{
+    font-family: roboto;
+    font-size: 24px;
+    font-weight: 400;
+    position: relative;
+    margin-left: 150px;
+    margin-top: 16px;
+}
+header div p{
+    font-family: roboto;
+    color: gray;
+    font-size: 22px;
+    font-weight: 300;
+    line-height: 48px;
+    margin-left: 340px;
+    text-align: center;
+}
+.colorBG{
+    background-color: lightgray;
+    width: 100%;
+    height: 54px;
+    margin-top: 120px;
+}
+header .avatar{
+    display: inline-block;
+    position: absolute;
+}
