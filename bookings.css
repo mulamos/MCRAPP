@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+/*-------Global-------*/
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+:root {
+    --main-red: #FE0000;
+    --main-green: #00BF84;
+    --main-black: #1B1B1B;
+    --main-gray: #9B9B9B;
+    --main-blue: #3C434C;
+    --main-darkblue: #31373F;
+}
+html {
+    font-family: 'roboto', serif;
+    height: 100%;
+    min-height: 100%;
+}
+body {
+    background: #EEEEEE;
+    width: 100%;
+    height: 100%;
+    font-family: roboto;
+    min-height: 100%;
+    overflow:hidden;
+    z-index: -1;
+}
+/*-------Profile Page-------*/
+#sideMenu{
+    background: var(--main-blue);
+    max-width: 25%;
+    width: 25%;
+    height: 100%;
+    border-right: 1.5px solid var(--main-red);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    padding: 0;
+}
+.nav .back-btn{
+    padding: 16px 8px 16px 8px;
+    cursor: pointer
+}
+.mobile{
+    display: none;
+}
+.log-out{
+    align-content: left;
+    bottom: 0px;
+    width: 25%;
+    position: fixed;
+    padding:24px;
+    cursor: pointer;
+}
+.nav .active{
+    background: var(--main-darkblue);
+    border-left: 5px solid var(--main-green);
+    box-shadow: 1px 1px 2px black inset;
+}
+.nav a{
+    font-family: roboto;
+    display: block;
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: 300;
+    text-align: center;
+    letter-spacing: 1px;
+    transition: all 0.5s ease-in-out;
+}
+.nav div:hover{
+    border-left: 5px solid var(--main-green);
+    background: var(--main-darkblue);
+    opacity: .7;
+}
+.nav .tab-icon{
+    padding: 10% 25% 10% 25%;
+    align-content:center;
+}
+.nav .tab-icon img{
+    display: block;
+    margin: auto;
+    padding-bottom: 16px;
+}
+.nav div{
+    padding: 10% 0% 10% 0%;
+    cursor: pointer;
+}
+.wrapper{
+    position: relative;
+    width:30%;
+    font-family: Roboto-medium;
+    display: block;
+    margin-left: 39.5%;
+    margin-right: auto;
+}
+header p{
+    margin-left: 40%;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    font-size: 32px;
+    font-family: Roboto-Light;
+}
+header h2{
+    margin-left: 40%;
+    font-size:32px;
+    font-family: Roboto-Regular;
+    margin-top: -16px;
+    margin-bottom:8px;
+}
+header h3{
+    margin-left: 40%;
+    font-size:24px;
+    font-family: Roboto-light;
+    margin-top: 8px;
+    margin-bottom: 40px;
+}
+.wrapper .row label{
+    font-size:30px;
+    color:#1B1B1B;
+    font-family: Roboto-Bold;
+}
+.wrapper img{
+    float:right;
+    cursor: pointer;
+}
+.indent{
+    margin-left:8px;
+}
+.row .input-field{
+    margin:0;
+}
+#txt-area{
+    margin-top:24px;
+}
+    /* label color */
+.row .input-field .textarea {
+   font-size:30px;
+    margin-top: -16px
+}
+   /* label focus color */
+   .input-field input[type=text]:focus + label {
+     color: #00BF84;
+   }
+   /* label underline focus color */
+   .input-field input[type=text]:focus {
+     border-bottom: 1px solid #00BF84;
+     box-shadow: 0 1px 0 0 #00BF84;
+   }
+   /* valid color */
+   .input-field input[type=text].valid {
+     border-bottom: 1px solid #00BF84;
+     box-shadow: 0 1px 0 0 #00BF84;
+   }
+   /* invalid color */
+   .input-field input[type=text].invalid {
+     border-bottom: 1px solid #FE0000;
+     box-shadow: 0 1px 0 0 #FE0000;
+   }
+   /* icon prefix focus color */
+   .input-field .prefix.active {
+     color: #000;
+   }
+
+/*dropdown*/
+/*the container must be positioned relative:*/
+            .custom-select {
+                position: relative;
+              font-family: Roboto-Medium;
+              width:30%;
+                display: block;
+                margin-left: 39%;
+                margin-right: auto;
+                margin-bottom: 16px;
+            }
+            .custom-select select {
+              display: none; /*hide original SELECT element:*/
+            }
+            .select-selected {
+              background-color: transparent;
+            }
+            /*style the arrow inside the select element:*/
+            .select-selected:after {
+              position: absolute;
+              content: "";
+              top: 28px;
+              right: 10px;
+              width: 0;
+              height: 0;
+              border: 6px solid transparent;
+              border-color:black transparent transparent transparent;
+            }
+            /*point the arrow upwards when the select box is open (active):*/
+            .select-selected.select-arrow-active:after {
+              border-color: transparent transparent black transparent;
+              top: 26px;
+            }
+            /*style the items (options), including the selected item:*/
+            .select-items div,.select-selected {
+              color: black;
+              padding: 8px 16px;
+              border: 1px solid transparent;
+              border-color: transparent transparent rgba(0, 0, 0, 0.0) transparent;
+              cursor: pointer;
+              user-select: none;
+              font-size:48px;
+              font-family: Roboto-Bold;
+                line-height: 40px;
+            }
+            /*style items (options):*/
+            .select-items {
+              position: absolute;
+              background-color: white;
+              box-shadow: 5px 10px 18px #888888;
+              top: 100%;
+              left: 0;
+              right: 0;
+              z-index: 99;
+                font-family: Roboto-Regular;
+            }
+            /*hide the items when the select box is closed:*/
+            .select-hide {
+              display: none;
+            }
+            .select-items div:hover, .same-as-selected {
+              background-color: rgba(0, 0, 0, 0.1);
+            }
+            /*Responsive*/
+            @media only screen and (max-width: 1200px) {
+                .custom-select {
+                    width:30%;
+                }
+                .select-items div,.select-selected {
+                    font-size:40px;
+                }
+            }
+            @media only screen and (max-width: 700px) {
+                .custom-select {
+                    width:30%;
+                }
+                .select-items div,.select-selected {
+                    font-size:40px;
+                }
+            }
+            @media only screen and (max-width: 500px) {
+                .custom-select {
+                    width:30%;
+                }
+                .select-items div,.select-selected {
+                    font-size:32px;
+                    text-align: left;
+                }
+                .select-selected:after {
+                    top:26px;
+                }
+            }

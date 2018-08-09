@@ -9,25 +9,37 @@
     <body>
         <section id="sideMenu">
             <nav>
-                <img class="back-btn" src="Assets/back-btn.png" alt="back">
+                <img class="back-btn" src="Assets/Icons/back-btn@2x.png" alt="back">
                 
-                <div id="profile-tab" class="active">
-                    <img src="Assets/profile-icon.png" alt="profile tab">
+                <div id="profile-tab" class="tab-icon active">
+                    <img src="Assets/Icons/profile-icon@2x.png" alt="profile tab">
                     <a href="#">Profile</a>
                 </div>
-                <div id="book-tab">
-                    <img src="Assets/clock-icon.png" alt="bookings">
+                <div id="book-tab" class="tab-icon">
+                    <img src="Assets/Icons/clock-icon@2x.png" alt="bookings">
                     <a href="#">Bookings</a>
                 </div>
-                <div id="sched-tab">
-                    <img src="Assets/calender-icon.png" alt="calender">
+                <div id="sched-tab" class="tab-icon">
+                    <img src="Assets/Icons/calender-icon@2x.png" alt="calender">
                     <a href="#">Schedule</a>
                 </div>
+                <div class="mobile">
+                    <label for="toggle">&#9776;</label>
+                    <input type="checkbox" id="toggle"/>
+                    <ul>
+                        <li><a href="#">Profile</a></li>
+                        <li><a href="#">Bookings</a></li>
+                        <li><a href="#">Schedule</a></li>
+                    </ul>
+                </div>
             </nav>
+            <div class="log-out">
+                    <img src="Assets/Icons/logout-icon.png">
+                </div>
         </section>
         <header>
             <div class="top-sect">
-                <img src="img_avatar.png" alt="Avatar" class="avatar">
+                <img src="Assets/Icons/user.png" alt="Avatar" class="avatar">
                 <h1>John Doe</h1>
                 <h2>Infrastructure Department</h2>
             </div>

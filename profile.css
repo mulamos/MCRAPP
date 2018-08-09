@@ -32,19 +32,34 @@ body {
     z-index: -1;
 }
 /*-------Profile Page-------*/
+nav{
+    background-color: var(--main-darkblue);
+}
 #sideMenu{
     background: var(--main-blue);
-    max-width: 340px;
-    width: 340px;
+    max-width: 25%;
+    width: 25%;
     height: 100%;
     border-right: 1.5px solid var(--main-red);
     position: absolute;
     top: 0;
     bottom: 0;
+    padding: 0;
 }
 nav .back-btn{
     padding: 16px 8px 16px 8px;
     cursor: pointer
+}
+.mobile{
+    display: none;
+}
+.log-out{
+    align-content: left;
+    bottom: 0px;
+    width: 100%;
+    position: fixed;
+    padding:24px;
+    cursor: pointer;
 }
 .active{
     background: var(--main-darkblue);
@@ -67,16 +82,21 @@ nav div:hover{
     background: var(--main-darkblue);
     opacity: .7;
 }
-nav div img{
-    padding: 8px 0px 8px 130px;
-    align-content: center;
+nav .tab-icon{
+    padding: 10% 25% 10% 25%;
+    align-content:center;
+}
+nav .tab-icon img{
+    display: block;
+    margin: auto;
+    padding-bottom: 16px;
 }
 nav div{
-    padding: 24px 0px 24px 0px;
+    padding: 10% 0% 10% 0%;
     cursor: pointer;
 }
 header .top-sect{
-    margin-left: 340px;
+    margin-left: 25%;
     padding: 32px 0px 0px 40px;
 }
 header h1{

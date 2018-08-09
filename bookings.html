@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> MCRA </title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <!-- Compiled and minified CSS -->
+        <link rel="stylesheet" href="bookings.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+        <!-- Compiled and minified JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+        <script src="main.js"></script>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <section id="sideMenu">
+            <div class="nav ">
+                <img class="back-btn" src="Assets/Icons/back-btn@2x.png" alt="back">
+                
+                <div id="profile-tab" class="tab-icon">
+                    <img src="Assets/Icons/profile-icon@2x.png" alt="profile tab">
+                    <a href="#">Profile</a>
+                </div>
+                <div id="book-tab" class="tab-icon active">
+                    <img src="Assets/Icons/clock-icon@2x.png" alt="bookings">
+                    <a href="#">Bookings</a>
+                </div>
+                <div id="sched-tab" class="tab-icon">
+                    <img src="Assets/Icons/calender-icon@2x.png" alt="calender">
+                    <a href="#">Schedule</a>
+                </div>
+                <div class="mobile">
+                    <label for="toggle">&#9776;</label>
+                    <input type="checkbox" id="toggle"/>
+                    <ul>
+                        <li><a href="#">Profile</a></li>
+                        <li><a href="#">Bookings</a></li>
+                        <li><a href="#">Schedule</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="log-out">
+                    <img src="Assets/Icons/logout-icon.png">
+                </div>
+        </section>
+        <header>
+            <p>Book a MITS meeting room</p>
+            <div class="custom-select" >
+                  <select>
+                    <option value="0">Main Conference Room</option>
+                    <option value="2" selected="selected">Meeting Room 1</option>
+                    <option value="3">Meeting Room 2</option>
+                  </select>
+                </div>
+            <h2>Infrastructure Department</h2>
+            <h3>Second floor</h3>
+            <div class="wrapper">
+                <div class="indent">
+                    <!--surround the select box with a "custom-select" DIV element. Remember to set the width:-->
+
+                    <div class = "row">
+                     <form class = "col s12">
+                        <div class = "row">               
+                           <label>Date:</label>              
+                           <input type = "date" class = "datepicker" />    
+                        </div>            
+                     </form>       
+                  </div>
+                </div>
+
+                <div class="row">
+                    <label class="indent">Start from:</label>
+                    <div class="input-field col s12">
+                        <input class="timepicker" placeholder="--:-- --"/>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <label class="indent">To:</label>
+                    <div class="input-field col s12">
+                        <input class="timepicker" placeholder="--:-- --"/>
+                    </div>
+                </div>
+
+                <div class="row">
+                  <form class="col s12">
+                      <div class="row">
+                      <div id="txt-area" class="input-field col s12">
+                        <textarea id="textarea2" class="materialize-textarea" data-length="120"></textarea>
+                        <label class="textarea" for="textarea2">Description (Optional)</label>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+                <img src="Assets/Icons/bookroom-btn.png">
+            </div>
+        </header>
+    </body>
+</html>
