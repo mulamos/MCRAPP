@@ -25,7 +25,7 @@ html {
 body {
     width: 100%;
     height: 100%;
-    background-image: url(Assets/display%20bg.png);
+    background-image: url(Assets/Images/display%20bg.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -40,7 +40,8 @@ body {
 
 /*-------Time Date Section-------*/
 .main-container .timedate .time{
-    font-size: 64px;
+    font-size: 100px;
+    font-family: Roboto-Regular;
     color: white;
     display: table-cell;
     font-weight: 400;
@@ -49,15 +50,18 @@ body {
     width: inherit;
     vertical-align: middle;
     line-height: 60px;
+    letter-spacing: 0.89px;
 }
 .main-container .timedate .time span{
-    color: var(--main-black);
+    color: #3C434C;
     font-size: 32px;
+    letter-spacing: 0.09px;
+    font-family:Roboto-Bold;
 }
 .main-container .timedate{
     background-color: var(--main-green);
     height: 290px;
-    width: 505px;
+    width: 30%;
     opacity: .9;
     filter: alpha(opacity=50);
     text-align: center;
@@ -67,9 +71,10 @@ body {
 
 /*-------Middle Section-------*/
 .main-container .mid-sect .options h1{
-    font-family: roboto;
+    font-family: Roboto-Bold;
     font-size: 48px;
-    font-weight: 780;
+    letter-spacing: 0.56px;
+    line-height: 92px;
     color: var(--main-black);
     cursor:pointer;
 }
@@ -79,18 +84,24 @@ body {
     cursor: pointer;
 }
 .main-container .mid-sect .options .dropdwn{
-    margin-top: 24px;
+    display:inline-block;
+    margin-top: 52px;
+    margin-left: 16px;
     cursor: pointer;
 }
 .main-container .mid-info p{
     font-size: 32px;
 }
-.main-container .mid-info .top .red{
+.main-container .mid-info .top .red-color{
     color: var(--main-red);
     font-size: 32px;
+    letter-spacing: 0.09px;
+    font-family: Roboto-Bold;
 }
-.main-container .mid-info .top .green{
+.main-container .mid-info .top .green-color{
+    font-family: Roboto-Bold;
     font-weight: 600;
+    letter-spacing: 0.12px;
     color: var(--main-green);
 }
 .main-container .btnGroup .end-btn{
@@ -130,12 +141,13 @@ body {
     opacity: .9;
     filter: alpha(opacity=50);
     float:left; 
-    width:710px; 
-    height:1200px; 
+    width:40%; 
+    height:1200px;
+    margin-top: -60px;
 }
 .mid-sect .options{
     position: relative;
-    margin: 80px;
+    margin: 80px 80px 66px 80px;
 }
 .mid-sect .mid-info{
     margin-left: 80px;
@@ -152,24 +164,182 @@ body {
 .mid-sect .mid-info .bottom{
     margin-bottom: 80px;
 }
-
+    /*-------Custom Room Select-------*/
+    /*the container must be positioned relative:*/
+            .custom-select {
+                position: relative;
+              font-family: Roboto-Bold;
+              width:500px;
+                display: block;
+                margin-left: 80px;
+                margin-right: auto;
+                margin-top: 120px;
+                margin-bottom: 48px;
+            }
+            .custom-select select {
+              display: none; /*hide original SELECT element:*/
+            }
+            .select-selected {
+              background-color: transparent;
+            }
+            /*style the arrow inside the select element:*/
+            .select-selected:after {
+              position: absolute;
+              content: "";
+              top: 28px;
+              right: 10px;
+              width: 0;
+              height: 0;
+              border: 6px solid transparent;
+              border-color:black transparent transparent transparent;
+            }
+            /*point the arrow upwards when the select box is open (active):*/
+            .select-selected.select-arrow-active:after {
+              border-color: transparent transparent black transparent;
+              top: 20px;
+            }
+            .select-items div{
+                font-size:40px;
+                padding-left: 16px;
+                font-family: Roboto-Regular;
+                line-height: 54px;
+                color: #1C1F23;
+                cursor: pointer;
+            }
+            /*style the items (options), including the selected item:*/
+             .select-selected {
+              color: #1C1F23;
+              cursor: pointer;
+              user-select: none;
+              font-size:48px;
+              font-family: Roboto-Bold;
+              left:0px;
+              line-height: 54px;
+            }
+            /*style items (options):*/
+            .select-items {
+              position: absolute;
+              background-color: white;
+              box-shadow: 5px 10px 18px #888888;
+              top: 100%;
+              left: 0;
+              right: 0;
+              z-index: 99;
+            }
+            /*hide the items when the select box is closed:*/
+            .select-hide {
+              display: none;
+            }
+            .select-items div:hover, .same-as-selected {
+              background-color: rgba(0, 0, 0, 0.1);
+            }
+            /*Responsive*/
+            @media only screen and (max-width:1750px){
+                .custom-select {
+                    width: 390px;
+                }
+                .select-items div {
+                    font-size:40px;
+                }
+                .select-selected{
+                    font-size: 44px;
+                }
+            }
+            @media only screen and (max-width: 1200px) {
+                .custom-select {
+                    width:320px;
+                    margin-top: 140px
+                }
+                .select-items div {
+                    font-size:30px;
+                    line-height: 40px;
+                }
+                .select-selected{
+                    font-size: 32px;
+                    line-height: 40px;
+                }
+                .select-selected:after{
+                    top: 16px;
+                }
+                .select-selected.select-arrow-active:after{
+                    top:16px;
+                }
+            }
+            @media only screen and (max-width:1100px){
+                .custom-select {
+                    width:280px;
+                }
+                .select-items div {
+                    font-size:24px;
+                }
+                .select-selected{
+                    font-size: 32px;
+                }
+            }
+            @media only screen and (max-width: 900px) {
+                .custom-select {
+                    width:240px;
+                    margin-top:150px; 
+                    margin-bottom: 37px;
+                }
+                .select-items div {
+                    font-size:24px;
+                    line-height: 40px;
+                }
+                .select-selected{
+                    font-size: 28px;
+                    line-height: 40px;
+                }
+                .select-selected:after{
+                    top: 16px;
+                }
+                .select-selected.select-arrow-active:after{
+                    top:16px;
+                }
+            }
+            @media only screen and (max-width: 600px) {
+                .custom-select{
+                    width:70%;
+                    padding-top: 40px;
+                    padding-bottom: 16px;
+                    left:21%;
+                    right: 85%;
+                }
+                .select-items div {
+                    font-size:24px;
+                    line-height: 32px;
+                    text-align: left;
+                }
+                .select-selected{
+                    font-size: 24px;
+                    line-height: 32px;
+                    text-align: left;
+                }
+                .select-selected:after{
+                    top: 56px;
+                }
+                .select-selected.select-arrow-active:after{
+                    top:50px;
+                }
+            }
 /*-------Right Section-------*/
-.main-container .right-sect{
-    
-}
-.main-container .right-sect .right-top .green{
+.main-container .right-sect .right-top .green-color{
     color: var(--main-green);
-    font-size: 36px;
+    font-size: 40px;
+    letter-spacing: 0.11px;
+    font-family: Roboto-bold;
 }
 .main-container .right-sect .right-info h3{
-    font-size: 32px;
-    font-weight: 400;
+    font-family: Roboto-Medium;
+    font-size: 40px;
+    letter-spacing: 0.69px;
+    line-height: 48px;
     color: var(--main-gray);
-    letter-spacing: 1px;
 }
 .main-container .right-sect .right-info p {
     font-size: 32px;
-    font-weight: 400;
+    font-family: Roboto-Bold;
+    letter-spacing: 0.14px;
     color: white;
 }
 .main-container .right-sect .btnGroup{
@@ -205,11 +375,6 @@ body {
     background-color: var(--main-green);
     opacity: 1;
 }
-.main-container .right-sect .login-btn{
-    float: right;
-
-    cursor: pointer;
-}
 .main-container .right-sect .login-btn:hover{
     opacity: 0.7;
     cursor: pointer;
@@ -219,17 +384,18 @@ body {
     opacity: .9;
     filter: alpha(opacity=50);
     float:left; 
-    width:705px; 
+    width:30%; 
     height:1200px;
 }
-.right-sect .right-info .white {
+.right-sect .right-info .white-color {
     color: white;
+    margin-bottom: 32px;
 }
 .right-sect .right-top{
     margin:40px 0px 0px 80px;
 }
 .right-sect .right-info{
-    margin: 32px 80px 0px 80px;
+    margin: 48px 4px 0px 80px;
 }
  .right-sect .short-line{
     width: 112px;
@@ -253,9 +419,276 @@ body {
 .right-sect .right-bottom{
     margin: 32px 0px 64px 0px;
 }
+/*Login Modal*/
 .container .login-btn button{
+    cursor: pointer;
     float: right;
-    margin-right: 475px;
-    margin-top: 16px;
+    margin-right:60%;
+    margin-left: 0%;
+    margin-top: 64px;
+    margin-bottom: 30px;
 }
+#popUpWindow{
+  //background: lightblue; 
+}
+#float-left #float-right{
+    width:100px;
+    height:100px;
+    border:1px solid red;
+    margin-right:10px;
+    float:left;
+}
+.modal-pic{
+    float:right;
+    width: 50%;
+    margin-top:px;
+    padding: 0px;
+}
+.modal-header{
+    margin:0px;
+}
+.modal-header img{
+    max-width: 100%;
+    max-height: 100%;
+    margin-left: 10px;
+}
+.modal-header form{
+    width:50%;
+}
+.form-group input{
+    margin:auto auto 16px;
+}
+#log-in{
+    margin-top: 16px; 
+}
+.footer{
+    margin-top:px;
+    width: 25%;
+}
+.form-group h1{
+    margin-bottom: 16px;
+}
+    /*Login Modal Responsive*/
+    @media only screen and (max-width:700px){
+        #log-in{
+            margin-top:40px;
+        }
+    }@media only screen and (max-width:600px){
+        #log-in{
+            margin-top:-6px;
+        }
+        input{
+        margin:auto auto 8px;
+        }
+        .modal-header img{
+            display: none;
+        }
+        .modal-header form{
+            width:100%;
+        }
+    }
+
+/*Overall Display Responsive*/
+@media only screen and (max-width:1750px){
+    .container .login-btn button{
+        margin-right: 70%;
+    }
+}
+@media only screen and (max-width:1200px){
+    .container .login-btn button{
+        margin-right: 71%;
+    }
+    .main-container .right-sect .right-info p{
+        font-size:24px;
+    }
+    .main-container .timedate .time{
+        font-size: 72px;
+    }
+    .main-container .timedate .time span{
+        font-size: 24px;
+    }
+    .main-container .mid-info .top .red-color{
+        font-size: 20px;
+    }
+    .main-container .mid-info p{
+        font-size:24px;
+    }
+    .main-container .btnGroup .redBG{
+        height: 50px;
+        width: 150px;
+    }
+    .main-container .btnGroup .end-btn{
+        height: 50px;
+        width: 150px;
+        line-height: 50px;
+    }
+    .container .login-btn button{
+        margin-top:78px;
+    }
+    .main-container .right-sect .right-top .green-color{
+        font-size:24px;
+    }
+    .main-container .btnGroup .greenBG{
+        height: 50px;
+        width: 150px;
+    }
+    .main-container .btnGroup .add-btn{
+        height: 50px;
+        width: 150px;
+        line-height: 50px;
+    }
+    .main-container .right-sect .right-info h3{
+        font-size:24px;
+        letter-spacing: 0.42px;
+        line-height: 32px;
+    }
+    .main-container .right-sect .right-info p{
+        font-size: 20px;
+    }
+}
+@media only screen and (max-width:900px){
+    .main-container .timedate .time{
+        font-size: 48px;
+        line-height: 40px;
+    }
+    .main-container .timedate .time span{
+        font-size: 16px;
+    }
+    .main-container .timedate{
+        height: 180px;
+    }
+    .mid-sect .mid-info{
+        margin-left: 16px;
+    }
+    .main-container .mid-sect .btnGroup{
+        margin-left: 16px;
+    }
+    .custom-select{
+        margin-left: 16px;
+        margin-top: 90px;
+        margin-bottom: 18px;
+    }
+    .main-container .mid-info .top .red-color{
+        font-size: 20px;
+    }
+    .main-container .mid-info p{
+        font-size:24px;
+    }
+    .main-container .btnGroup .redBG{
+        height: 50px;
+        width: 150px;
+    }
+    .main-container .btnGroup .end-btn{
+        height: 50px;
+        width: 150px;
+        line-height: 50px;
+    }
+    .container .login-btn button{
+        margin-left: auto;
+        margin-top: 40px;
+        margin-bottom: 0px;
+    }
+    .right-sect .right-top{
+        margin-left: 16px;
+    }
+    .main-container .right-sect .right-top .green-color{
+        font-size:24px;
+    }
+    .right-sect .short-line{
+        margin-left: 16px;
+    }
+    .right-sect .right-info{
+        margin-left: 16px;
+    }
+    .main-container .btnGroup .greenBG{
+        height: 50px;
+        width: 150px;
+    }
+    .main-container .btnGroup .add-btn{
+        height: 50px;
+        width: 150px;
+        line-height: 50px;
+    }
+    .main-container .right-sect .btnGroup{
+        margin-left: 16px;
+    }
+    .main-container .right-sect .right-info h3{
+        font-size:24px;
+        letter-spacing: 0.42px;
+        line-height: 32px;
+    }
+    .main-container .right-sect .right-info p{
+        font-size: 20px;
+    }
+}
+@media only screen and (max-width:768px){
+    .container .login-btn button{
+        margin-left: auto;
+        margin-right: 60px;
+    }
+}
+@media only screen and (max-width:600px){
+    body{
+        background: none;
+        overflow: scroll;
+    }
+    .main-container .timedate{
+        float:none;
+        width:100%;
+        height: ;
+    }
+    .main-container .timedate .time{
+        font-size:48px;
+        display: inline-block;
+        font-size:48px;
+        padding-top: 32px;
+    }
+    .main-container .timedate .time span{
+        font-size: 24px;
+    }
+    .main-container .mid-sect{
+        float:none;
+        width:100%;
+        margin-top:-90px;
+        height: auto;
+        text-align: left;
+        display: block;
+        
+    }
+    .mid-sect .mid-info{
+        margin-left: 25%;
+        margin-right: 25%;
+        width: 75%;
+    }
+    .main-container .mid-sect .btnGroup{
+        margin-left: 25%; 
+    }
+    
+    .main-container .right-sect{
+        float:none;
+        width: 100%;
+        height: auto;
+    }
+    .right-sect .right-top{
+        margin-left: 25%;
+        margin-right: 25%;
+        width: 75%;
+    }
+    .right-sect .short-line{
+        margin-left: 25%;
+        margin-right: 25%;
+    }
+    .right-sect .right-info{
+        margin-left: 25%;
+        margin-right: 25%;
+        width: 75%;
+    }
+    .main-container .right-sect .btnGroup{
+        margin-left: 25%;
+    }
+}
+
+
+
+
 
