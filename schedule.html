@@ -5,13 +5,14 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="schedule.css">
+        <script src="main.js"></script>
     </head>
     <body>
         <section id="sideMenu">
             <nav>
                 <img class="back-btn" src="Assets/Icons/back-btn@2x.png" alt="back">
                 
-                <div id="profile-tab" class="tab-icon active">
+                <div id="profile-tab" class="tab-icon">
                     <img src="Assets/Icons/profile-icon@2x.png" alt="profile tab">
                     <a href="#">Profile</a>
                 </div>
@@ -19,7 +20,7 @@
                     <img src="Assets/Icons/clock-icon@2x.png" alt="bookings">
                     <a href="#">Bookings</a>
                 </div>
-                <div id="sched-tab" class="tab-icon">
+                <div id="sched-tab" class="tab-icon  active">
                     <img src="Assets/Icons/calender-icon@2x.png" alt="calender">
                     <a href="#">Schedule</a>
                 </div>
@@ -40,9 +41,15 @@
         <header>
             <div class="nav top">
                 <ul>
-                    <li><a href="#">Meeting Room</a></li>
-                    <li><a href="#">My Schedule</a></li>
-                    <li><a href="#">Overall</a></li>
+                    <li><div class="custom-select" >
+                      <select>
+                        <option value="0">Main Conference Room</option>
+                        <option value="1" selected="selected">Meeting Room 1</option>
+                        <option value="2">Meeting Room 2</option>
+                      </select>
+                    </div></li>
+                    <li class="sched top-active"><a href="#">My Schedule</a></li>
+                    <li class="overall top-inactive"><a href="#">Overall</a></li>
                 </ul>
             </div>
             <div class="time-update"><p>updated at 08:53pm on June 12, 2018</p></div>
@@ -51,22 +58,37 @@
                     <img src="Assets/Icons/date-nav-left-btn.png"><p>Thursday, Jun 21, 2018</p><img src="Assets/Icons/date-nav-right-btn.png">
                 </div>
                 <ul>
-                    <li><a href="#">Day</a></li>
-                     <li><a href="#">Week</a></li>
-                     <li><a href="#">Month</a></li>
-                     <li><a href="#">Today</a></li>
+                    <li><a class="day low-active" href="#">Day</a></li>
+                     <li><a class="week" href="#">Week</a></li>
+                     <li><a class="month" href="#">Month</a></li>
+                     <li><a class="today" href="#">Today</a></li>
                 </ul>
             </div>
-            <div class="section date-display">
-                <h1><span>June 21,</span>2018<br>Thursday</h1>
-            </div>
-            <div class="section">
-                <p>all-day</p>
-            </div>
-            <div>
-                <ul>
-                    <li>7am<hr></li>
-                </ul>
+            <div class="content-wrapper">
+                <div class="section date-display">
+                    <h1><span style="font-weight: 600;">June 21, </span>2018<br><span style="font-size:36px; ">Thursday</span></h1>
+                </div>
+                <div class="section all-day">
+                    <p>all-day</p>
+                </div>
+                <div class="scheduler">
+                    <ul class="content">
+                        <li class="left"><span>7AM</span></li>
+                        <li>8AM</li>
+                        <li>9AM</li>
+                        <li>10AM</li>
+                        <li>11AM</li>
+                        <li>12PM</li>
+                        <li>1PM</li>
+                        <li>2PM</li>
+                        <li>2PM</li>
+                        <li>3PM</li>
+                        <li>4PM</li>
+                        <li>5PM</li>
+                        <li>6PM</li>
+                        <li>7PM</li>
+                    </ul>
+                </div>
             </div>
         </header>
     </body>
