@@ -36,7 +36,7 @@ body {
 }
 /*-------Content-------*/
 .center{
-    margin-top:160px;
+    margin-top:10%;
 }
 .center h1{
     font-size: 48px;
@@ -64,14 +64,14 @@ body {
 /*-------Load Bar-------*/
 #skill { 
 	list-style: none;
-	width: 680px;
-	margin: 160px auto 0;
+	width: 50%;
+	margin: 10% auto 0;
 	position: relative;
 	line-height: 2em;
 	padding: 30px 0;
 }
 #skill li { 
-	margin-bottom:50px; 
+	margin-bottom:auto; 
 	background:#D7D7D7;
 	background-image: -webkit-gradient(linear, left top, left bottom, from(#e1ddd9), to(#e9e5e2));
 	background-image: -webkit-linear-gradient(top, #e1ddd9, #e9e5e2);
@@ -113,9 +113,5 @@ body {
 
 /*-------Responsive-------*/
 @media only screen and (max-width: 700px) {
-    #skill{
-        width: auto;
-        margin-left:32px;
-        margin-right:32px;
-    }
+
 }
