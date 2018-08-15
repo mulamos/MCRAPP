@@ -113,7 +113,7 @@ body {
     font-size: 16px;
     font-weight: 700;
     text-align: center;
-    margin-bottom: 135px;
+    margin-bottom: 40%;
     color: #ffffff;
 }
 .main-container .mid-sect .btnGroup{
@@ -247,15 +247,15 @@ body {
             }
             @media only screen and (max-width: 1200px) {
                 .custom-select {
-                    width:320px;
+                    width:300px;
                     margin-top: 140px
                 }
                 .select-items div {
-                    font-size:30px;
+                    font-size:28px;
                     line-height: 40px;
                 }
                 .select-selected{
-                    font-size: 32px;
+                    font-size: 30px;
                     line-height: 40px;
                 }
                 .select-selected:after{
@@ -278,7 +278,7 @@ body {
             }
             @media only screen and (max-width: 900px) {
                 .custom-select {
-                    width:240px;
+                    width:250px;
                     margin-top:150px; 
                     margin-bottom: 37px;
                 }
@@ -299,7 +299,7 @@ body {
             }
             @media only screen and (max-width: 600px) {
                 .custom-select{
-                    width:70%;
+                    width:66%;
                     padding-top: 40px;
                     padding-bottom: 16px;
                     left:21%;
@@ -316,10 +316,10 @@ body {
                     text-align: left;
                 }
                 .select-selected:after{
-                    top: 56px;
+                    top: 52px;
                 }
                 .select-selected.select-arrow-active:after{
-                    top:50px;
+                    top:48px;
                 }
             }
 /*-------Right Section-------*/
@@ -356,7 +356,7 @@ body {
     font-size: 16px;
     font-weight: 700;
     text-align: center;
-    margin-bottom: 135px;
+    margin-bottom: 40%;
     color: #ffffff;
 }
 .main-container .btnGroup .greenBG{
@@ -473,7 +473,8 @@ body {
         #log-in{
             margin-top:40px;
         }
-    }@media only screen and (max-width:600px){
+    }
+    @media only screen and (max-width:600px){
         #log-in{
             margin-top:-6px;
         }
@@ -685,6 +686,9 @@ body {
     }
     .main-container .right-sect .btnGroup{
         margin-left: 25%;
+    }
+    .container .login-btn button{
+        margin-top:18%;
     }
 }
 

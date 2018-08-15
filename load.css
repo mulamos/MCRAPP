@@ -41,7 +41,7 @@ body {
 .center h1{
     font-size: 48px;
     color: white;
-    font-family: Roboto-Medium;
+    font-family: Roboto-Regular;
     text-align: center;
     letter-spacing: 4.93px;
     font-weight: 400;
@@ -52,7 +52,7 @@ body {
     font-weight: 300;
     color: white;
     text-align: center;
-    font-family: Roboto-Regular;
+    font-family: Roboto-light;
     letter-spacing: 3.29;
 }
 .center img {
